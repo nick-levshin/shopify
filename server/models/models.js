@@ -29,12 +29,12 @@ const Device = sequelize.define('device', {
 
 const Type = sequelize.define('type', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  type: { type: DataTypes.STRING, unique: true, allowNull: false },
+  name: { type: DataTypes.STRING, unique: true, allowNull: false },
 });
 
 const Brand = sequelize.define('brand', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  brand: { type: DataTypes.STRING, unique: true, allowNull: false },
+  name: { type: DataTypes.STRING, unique: true, allowNull: false },
 });
 
 const Rating = sequelize.define('rating', {
