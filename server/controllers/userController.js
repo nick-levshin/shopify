@@ -1,11 +1,16 @@
+const ApiError = require('../error/ApiError');
+
 class UserController {
   async registration(req, res) {}
 
   async login(req, res) {}
 
-  async check(req, res) {
+  async check(req, res, next) {
     const { id } = req.query;
-    res.json(query);
+    if (!id) {
+      return next(ApiError.badRequest('ID not set'));
+    }
+    res.json(id);
   }
 }
 
