@@ -1,12 +1,7 @@
 import React from 'react';
 
-
 const Auth = () => {
-return (
-
-
-);
+  return;
 };
 
-
-export default Auth
+export default Auth;
