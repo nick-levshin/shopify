@@ -39,33 +39,6 @@ export default class DeviceStore {
         typeId: 2,
         brandId: 2,
       },
-      {
-        id: 1,
-        name: '12 pro',
-        price: 100000,
-        rating: 0,
-        img: 'd56c8e98-9bd5-40e3-a50d-3be2956c61c3.jpg',
-        typeId: 1,
-        brandId: 2,
-      },
-      {
-        id: 2,
-        name: 'a52',
-        price: 100000,
-        rating: 0,
-        img: '72ea8115-1be6-49e2-b8f9-062ccf66e58a.jpg',
-        typeId: 1,
-        brandId: 1,
-      },
-      {
-        id: 3,
-        name: 'Atlant',
-        price: 100000,
-        rating: 0,
-        img: '7c044ed8-9ad6-48e3-bf55-8b9f2925cba8.jpg',
-        typeId: 2,
-        brandId: 2,
-      },
     ];
     this._selectedType = {};
     this._selectedBrand = {};

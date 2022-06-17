@@ -7,21 +7,16 @@ const AppRouter = () => {
   const { user } = useContext(Context);
   return (
     <div>
-      {user.isAuth ? (
-        <Routes>
-          {authRoutes.map(({ path, Component }) => (
+      <Routes>
+        {publicRoutes.map(({ path, Component }) => (
+          <Route key={path} path={path} element={<Component />} />
+        ))}
+        {user.isAuth &&
+          authRoutes.map(({ path, Component }) => (
             <Route key={path} path={path} element={<Component />} />
           ))}
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
-      ) : (
-        <Routes>
-          {publicRoutes.map(({ path, Component }) => (
-            <Route key={path} path={path} element={<Component />} />
-          ))}
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
-      )}
+        <Route path="/*" element={<Navigate to="/" />} />
+      </Routes>
     </div>
   );
 };

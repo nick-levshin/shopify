@@ -1,11 +1,14 @@
 import React from 'react';
+import { Container, Button } from 'react-bootstrap';
 
 const Admin = () => {
   return (
-    <div>
-      
-    </div>
+    <Container>
+      <Button>Add type</Button>
+      <Button>Add brand</Button>
+      <Button>Add device</Button>
+    </Container>
   );
-}
+};
 
-export default Admin
+export default Admin;
