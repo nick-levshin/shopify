@@ -13,7 +13,7 @@ const Auth = () => {
       style={{ height: window.innerHeight - 67 }}
     >
       <Card style={{ width: 600 }} className="p-5">
-        <h2 className="m-auto">Authorization</h2>
+        <h2 className="m-auto">{isLogin ? 'Log In' : 'Sign Up'}</h2>
         <Form className="d-flex flex-column align-items-center">
           <Form.Control className="mt-3" placeholder="Email" />
           <Form.Control className="mt-3" placeholder="Password" />
