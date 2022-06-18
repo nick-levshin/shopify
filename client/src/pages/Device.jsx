@@ -56,7 +56,7 @@ const DevicePage = () => {
       </Row>
       <Row className="d-flex dlex-column m-3">
         <h1>Specifications</h1>
-        {device.info.map((info, index) => {
+        {device.info.map((info, index) => (
           <Row
             key={info.id}
             className="d-felx"
@@ -66,8 +66,8 @@ const DevicePage = () => {
             }}
           >
             {info.title}: {info.description}
-          </Row>;
-        })}
+          </Row>
+        ))}
       </Row>
     </Container>
   );

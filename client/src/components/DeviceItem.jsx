@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Col, Card, Image } from 'react-bootstrap';
 import star from '../assets/star.svg';
 import { useNavigate } from 'react-router-dom';
 import { DEVICE_ROUTE } from '../utils/consts';
+import { fetchOneBrand } from '../http/deviceAPI';
 
 const DeviceItem = ({ device }) => {
   const navigate = useNavigate();
+  const [brand, setBrand] = useState('');
+
+  useEffect(() => {
+    fetchOneBrand(device.brandId).then((data) => setBrand(data.name));
+  }, []);
+
   return (
     <Col
       md={3}
@@ -19,7 +26,7 @@ const DeviceItem = ({ device }) => {
           src={process.env.REACT_APP_API_URL + device.img}
         />
         <div className="text-black-50 mt-1 d-flex justify-content-between align-item-center">
-          <div>Samsung...</div>
+          <div>{brand}</div>
           <div className="d-flex align-items-center">
             <div>{device.rating}</div>
             <Image src={star} width={18} />
